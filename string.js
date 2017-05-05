@@ -1,6 +1,15 @@
-var starPrinter = "*";
-starPrinter(10);
+function printStars() {
+    for (let i = 10; i > 0; i--) {
+        setTimeout(function() {
+            let colors = require('colors/safe');
+            let stars = "";
 
-setTimeout(function() {
-	console.log("********* + i--");
-}, 9000);
+     for (let j = 0; j < i; j++) {
+        stars = stars + "*  ";
+    }
+
+            console.log(colors.blue(stars));
+        }, 10000 - (i * 1000));
+    }
+}
+module.exports = printStars();
