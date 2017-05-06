@@ -1,15 +1,34 @@
-function printStars() {
-    for (let i = 10; i > 0; i--) {
-        setTimeout(function() {
-            let colors = require('colors/safe');
-            let stars = "";
+function printStars(starCount) {
+	let stars = "";
 
-     for (let j = 0; j < i; j++) {
-        stars = stars + "*  ";
-    }
+	for (let j = 0; j < starCount; j++) {
+		stars = stars + " *";
+	}
 
-            console.log(colors.blue(stars));
-        }, 10000 - (i * 1000));
-    }
+	console.log(stars);
+
+	if (starCount > 1) {
+		setTimeout(function() {
+			printStars(starCount - 1);
+		}, 1000);
+	}
 }
-module.exports = printStars();
+
+printStars(10);
+
+
+
+
+
+
+
+// for (var i = 10; i >0; i--) {
+//
+// 		var stars = "";
+//
+// 		for (var j = 0; j < i; j++) {
+// 			stars = stars + " *";
+// 		}
+//
+// 	console.log(stars);
+// 	}
