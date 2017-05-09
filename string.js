@@ -1,11 +1,14 @@
 function printStars(starCount) {
+
+	let colors = require('colors/safe');
 	let stars = "";
 
-	for (let j = 0; j < starCount; j++) {
+
+	for (let i = 0; i < starCount; i++) {
 		stars = stars + " *";
 	}
 
-	console.log(stars);
+	console.log(colors.blue(stars));
 
 	if (starCount > 1) {
 		setTimeout(function() {
@@ -15,20 +18,4 @@ function printStars(starCount) {
 }
 
 printStars(10);
-
-
-
-
-
-
-
-// for (var i = 10; i >0; i--) {
-//
-// 		var stars = "";
-//
-// 		for (var j = 0; j < i; j++) {
-// 			stars = stars + " *";
-// 		}
-//
-// 	console.log(stars);
-// 	}
+module.exports = printStars();
