@@ -3,7 +3,6 @@ function printStars(starCount) {
 	let colors = require('colors/safe');
 	let stars = "";
 
-
 	for (let i = 0; i < starCount; i++) {
 		stars = stars + " *";
 	}
@@ -17,5 +16,4 @@ function printStars(starCount) {
 	}
 }
 
-printStars(10);
-module.exports = printStars();
+module.exports = printStars;

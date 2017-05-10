@@ -1,2 +1,2 @@
-var StarPrinter = require('./module.js')("* + i--");
-StarPrinter();
+var StarPrinter = require('./string.js');
+StarPrinter(10);

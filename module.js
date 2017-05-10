@@ -1,6 +1,6 @@
 var starPrinter = "*";
 starPrinter(10);
 
-function starPrinter() {
+function starPrinte() {
 	console.log("* + i--");
-};
+}
